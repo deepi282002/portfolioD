@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepi's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0af8f1f959.js" crossorigin="anonymous"></script>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+body{
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(22, 129, 31);
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white
+}
+nav ul li a:hover{
+    color: rgb(136, 219, 136);
+    font-size: 1.04rem;
+}
+
+main hr{
+    border: 0;
+    background: green;
+    height: 1.2px;
+    margin: 40px 84px;
+}
+.left{
+    font-size: 1.5rem;
+}
+
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    margin: 130px 0;
+}
+.firstSection > div{
+    width: 30%;
+}
+.leftSection{
+   font-size: 3rem;
+   margin: 30px 0;
+}
+.rightSection img{
+    
+    width: 80%;
+  
+    
+}
+.green{
+    color: rgb(136, 219, 136);
+}
+.text-green{
+    color: rgb(136, 219, 136);
+}
+#element{
+   color: rgb(136, 219, 136);
+    
+}
+
+/*-------------------------about-------------------------*/
+#about{
+    padding: 80px 0;
+    color: rgb(225, 235, 225);
+}
+ .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ .about-col-1{
+    flex-basis:35%;
+ }
+ .about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+ }
+ .about-col-2{
+    flex-basis: 60%;
+ }
+ .sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    
+
+ }
+ .tab-titles{
+    display: flex;
+    margin:20px 0 40px;
+ }
+ .tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+ }
+
+ .tab-links::after{
+    content: '';
+    width:0;
+    height: 3px;
+    background:#0d8818;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+ }
+
+ .tab-links.active-link::after{
+    width: 50%;
+ }
+ .tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+ }
+ .tab-contents ul li span{
+    color: #17a921;
+    font-size: 14px;
+ }
+ .tab-contents{
+    display: none;
+ }
+ .tab-contents.active-tab{
+    display: block;
+ }
+ /*--------------------services-------------------*/
+
+ #services{
+    padding: 30px 0;
+    color: rgb(224, 233, 224);
+ }
+ .services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+ }
+ .services-list div{
+    background: rgb(25, 111, 25);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+ }
+ .services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+ }
+ .services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+ }
+ .services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+ }
+ .services-list div:hover{
+    background: #2a5525;
+    transform: translateY(-10px);
+ }
+
+ /*------------------project----------------*/
+ #project{
+    padding: 50px 0;
+    color:  rgb(240, 248, 240);
+ }
+ .work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    color:  rgb(231, 241, 231);
+ }
+ .work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+ }
+ .work img{
+    margin:  0 35px;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    
+ }
+ .layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #28872b);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 8px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+ }
+ .layer h3{
+    font-weight: 500;
+    margin-bottom:20px;
+    
+ }
+ .layer a{
+    margin-top: 20px;
+    color: #28872b;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+ }
+ .work:hover img{
+    transform: scale(1.1);
+ }
+ .work:hover .layer{
+    height: 100%;
+ }
+ .btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #28872b;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+ }
+ .btn:hover{
+    background:#28872b;
+ }
+ /*--------contact---------*/
+ .contact-left{
+    flex-basis: 35%;
+ }
+ .contact-right{
+    flex-basis: 60%
+ }
+ .contact-left p{
+    margin-top: 30px;
+ }
+ .contact-left p i{
+    color:#28872b;
+    margin-right: 15px;
+    font-size: 25px;
+ }
+ .social-icons{
+    margin-top: 30px;
+ }
+ .social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+ }
+ .social-icons a:hover{
+    color:#28872b;
+    transform: translateY(-5px);
+ }
+ .btn.btn2{
+    display: inline-block;
+    background: #28872b;
+ }
+ .contact-right form{
+    width: 100%;
+ }
+ form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+ }
+ form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+ }
+ /*---------------css for small screen------------*/
+
+ @media only screen and(max-with: 600px){
+    
+ }
+  
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Deepi's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+           Hi, My name is <span class="green">Deepika</span>
+          
+           <div>and I am a Passionate</div>
+           <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="profile.png" alt="">
+        </div>
+       
+      </section>  
+<hr>      
+</main>
+<!------------about------------>
+   
+                <main>
+                    <div id="about">
+                        <div class="container">
+                            <div class="row">
+                                <div class="about-col-1">
+                                    <img src="profile.png" alt="">
+                                </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am a multidisciplinary designer with a curious mind, I enjoy to meet new people and understand how they are solving problems,
+                            this is one of the reasons why I invest my time on meetups from product management to everything related to design (research, design thinking, design system, etc.)
+                            and talking to people in general, as always can be an opportunity to learn something new. I see it as a chance to improve myself as a professional 
+                            and put things in practice when I’m creating my solutions. I seek to simplify the relationship between people and the interactive products they use, taking into consideration business goals and technological constraints.
+                            
+                            I am self-aware of the impact our solutions have on people's lives, and this is the reason why I always give my best to create a seamless and delightful experience.
+    
+                        </p>
+    
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                <li><span>Web Development</span><br>Front end developer</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2024(1-2 months)</span><br>Self-taught from online resources </li>
+                                <li><span>2023-2024</span><br>Self taught developer</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <hr>
+                </main>
+                
+   
+   <!--------------------------Services------------------------>
+
+   <main>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div> 
+                    <i class="fa-solid fa-code"></i>
+                    <h2>UI/UX design</h2>
+                    <p>
+                        I have started my designing with my own creative knowledge and given my 
+                        work and ideas in designing smaller projects as a intern in certain companies.
+                        I create user-centered design solutions that delight businesses and solve user needs.
+                        If you have an idea or project feel free to contact me and we will make the best project
+                        with sharing creative knowledge.
+                        <a href="#">Learn more</a>
+
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Web Developer</h2>
+                    <p>
+                        I have started my designing with my own creative knowledge and given my 
+                        work and ideas in designing smaller projects as a intern in certain companies.
+                        I create user-centered design solutions that delight businesses and solve user needs.
+                        If you have an idea or project feel free to contact me and we will make the best project
+                        with sharing creative knowledge.
+                        <a href="#">Learn more</a>
+
+                    </p>
+                </div>
+  
+            </div>
+        </div>
+   </div>
+   <hr>
+   </main>
+
+<!-----------------projects-------------------> 
+<main>
+ <div id="project">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work4.png">
+                <div class="layer">
+                    <h3>Healthcare app</h3>
+                    <p>
+                    </p>
+                    <a href="https://www.figma.com/design/1La48lfAeqZl0p53hyKjUO/Untitled?m=auto&t=JdyFIClvZ8ZBxs4h-6"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="working.png">
+                <div class="layer">
+                    <h3>App design</h3>
+                    <p></p>
+                    <a href="https://www.figma.com/design/KNxVU61UfAh2kpMupkfOGF/Untitled?m=auto&t=JdyFIClvZ8ZBxs4h-6"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+ </div>  
+<hr>
+</main> 
+
+<!-------------contact----------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+           <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p> <i class="fa-solid fa-paper-plane"></i>chanchalarout.09@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 9893579843</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/deepika-rout-abb442225?trk=universal-search-cluster"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/deepika.rout.3154?utm_source=qr&igsh=MWw4bDRoa2R4YnlxYw=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/Deepika17490946?s=08"><i class="fa-brands fa-x-twitter"></i></a>  
+                
+            </div>
+            <a href="resume2.pdf" download class="btn btn2">Download CV</a>
+           </div>
+           <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your name" required>  
+              <input type="email" name="Name" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+           </div> 
+        </div>
+    </div>
+    
+</div>
+
+    
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['UI/UX Designer', 'Web Developer'],
+      typeSpeed: 50,
+    });
+  </script>
+
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        } 
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+  </script>
+</body>
+</html>
